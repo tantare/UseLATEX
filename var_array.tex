@@ -1,0 +1,39 @@
+% this is how you make an array in latex 
+\documentclass{article} 
+\usepackage{etoolbox}
+
+\newcounter{cnt}
+\newcommand\textlist{}
+\newcommand\settext[2]{%
+  \csdef{text#1}{#2}}
+\newcommand\addtext[1]{%
+  \stepcounter{cnt}%
+  \csdef{text\thecnt}{#1}}
+\newcommand\gettext[1]{%
+  \csuse{text#1}}
+
+\newcounter{colnum}
+\newcommand\maketabularrow[1]{%
+  \setcounter{colnum}{0}%
+  \whileboolexpr
+    { test {\ifnumcomp{\value{colnum}}{<}{#1}} }%
+    {&\stepcounter{colnum}\thecolnum}
+  }
+
+\begin{document}
+
+\addtext{one}
+\addtext{two}
+\addtext{three}
+\settext{100}{one hundred}
+
+This is text \gettext{1} and \gettext{3}, that is text \gettext{2}.
+
+\begin{tabular}{ |c@{} *{\thecnt}{c|} } % the first row is hidden
+\hline
+\maketabularrow{\thecnt}\\ \hline
+\end{tabular}
+
+100 is \gettext{100}.
+
+\end{document}

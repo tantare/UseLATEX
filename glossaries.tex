@@ -1,0 +1,87 @@
+\documentclass{article}
+
+%use package
+\usepackage[toc]{glossaries}
+
+%defining glossaries
+\newacronym{repl}{REPL}{Read Edit Print Loop }
+\newacronym{at}{AT}{Ambient Talk}
+\newacronym{cfg}{CFG}{Context Free Grammer}
+\newglossaryentry{dynamicprogramming}
+{
+	name= Dynamic Programming,
+	description = {
+		In mathematics, management science, economics, computer science, and bioinformatics, dynamic programming (also known as dynamic optimization) is a method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions - ideally, using a memory-based data structure. The next time the same subproblem occurs, instead of recomputing its solution, one simply looks up the previously computed solution, thereby saving computation time at the expense of a (hopefully) modest expenditure in storage space. (Each of the subproblem solutions is indexed in some way, typically based on the values of its input parameters, so as to facilitate its lookup.) The technique of storing solutions to subproblems instead of recomputing them is called "memoization".
+	}
+}
+\newglossaryentry{exnihilo}
+{
+  name=Ex nihilo,
+  description={
+  Ex nihilo is a Latin phrase meaning "out of nothing". It often appears in conjunction with the concept of creation, as in creatio ex nihilo, meaning "creation out of nothing"—chiefly in philosophical or theological contexts, but also occurs in other fields.In theology, the common phrase creatio ex nihilo ("creation out of nothing"), contrasts with creatio ex materia (creation out of some pre-existent, eternal matter) and with creatio ex deo (creation out of the being of God).The phrase ex nihilo also appears in the classical philosophical formulation ex nihilo nihil fit, which means "Out of nothing comes nothing".Ex nihilo when used outside of religious or metaphysical contexts, also refers to something coming from nothing. For example, in a conversation, one might raise a topic "ex nihilo" if it bears no relation to the previous topic of discussion.
+  }
+}
+\newglossaryentry{shallowcopy}
+{
+	name=Shallow Copy,
+	description={
+		Shallow copies duplicate as little as possible. A shallow copy of a collection is a copy of the collection structure, not the elements. With a shallow copy, two collections now share the individual elements.Deep copies duplicate everything. A deep copy of a collection is two collections with all of the elements in the original collection duplicated.
+	}
+}
+\newglossaryentry{prototypebased}
+{
+ name=Prototype Based,
+ description={
+ Prototype-based programming is a style of object-oriented programming in which behaviour reuse (known as inheritance) is performed via a process of cloning existing objects that serve as prototypes. This model can also be known as prototypal, prototype-oriented, classless, or instance-based programming. Delegation is the language feature that supports prototype-based programming.A fruit bowl serves as one example. A "fruit" object would represent the properties and functionality of fruit in general. A "banana" object would be cloned from the "fruit" object, and would also be extended to include general properties specific to bananas. Each individual "banana" object would be cloned from the generic "banana" object.
+ }
+}
+
+\newglossaryentry{oo}
+{
+  name=Object Oriented,
+  description={is a generic term referring to the family of Unix-like
+               computer operating systems that use the Linux kernel},
+  plural=Linuces
+}
+
+\newglossaryentry{Linux}
+{
+  name=Linux,
+  description={is a generic term referring to the family of Unix-like
+               computer operating systems that use the Linux kernel},
+  plural=Linuces
+}
+
+\newglossaryentry{naiive}
+{
+  name=na\"{\i}ve,
+  description={is a French loanword (adjective, form of naïf)
+               indicating having or showing a lack of experience,
+               understanding or sophistication},
+  sort=naive
+}
+
+ 
+\newglossaryentry{Anonymous Function}{
+name = Anonymous Function,
+description={An anonymous function is just a function that has no name; nothing more.}
+}
+
+\newglossaryentry{Closure}{
+name = closure,
+description={A closure is a function that captures the state of the surrounding environment.}
+}
+
+\newglossaryentry{Lambda}{
+name = lambda,
+description={The word "lambda" or "lambda expressions" most often refers to anonymous functions. So in that sense a lambda is a kind of function, but not every function is a lambda (i.e. named functions aren't usually referred to as lambdas). Depending on the language, anonymous functions are often implemented differently than named functions (particularly in languages where anonymous functions are closures and named functions are not), so referring to them with different terms can make sense.}
+}
+
+\newglossaryentry{lambdacalculus}{
+name = Lambda Calculus,
+description={The lambda calculus is a minimal programming language/mathematical model of computation, which uses functions as its only "data structure". In the lamdba calculus the lambda-symbol is used to create (anonymous) functions. This is where the usage of the term "lambda" in other languages comes from.}
+}
+
+\begin{document}
+\printglossary[title=List of Terms,toctitle=Terms and abbreviations]
+\end{document}
